@@ -19,15 +19,30 @@ describe("markdown-it-collapsible", () => {
 	});
 
 	
-	it("using ++> starts out CLOSED", () => {
+	it.only("using ++> starts out CLOSED", () => {
 		const result = md.render(`
 # Hello
 >>> this is my section
 - one
-- two
+- >>> two
+    - 2a
+		- 2b
 - three
 >>>
 `);
 		expect(/<details class="collapsible">/.test(result)).toBeTruthy();
+		console.log(result);
+		
 	});
+
+	
+		it("just a list", () => {
+			const result = md.render(`
+# Hello
+- one
+- two
+- three
+`);
+		});
+	
 });

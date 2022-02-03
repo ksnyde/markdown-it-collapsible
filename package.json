@@ -1,14 +1,14 @@
 {
-	"name": "markdown-it-collapsible",
+	"name": "markdown-it-expandable",
 	"version": "1.0.0",
-	"description": "A markdown-it plugin, which adds collapsibles via the HTML <details> and <summary> elements",
+	"description": "A markdown-it plugin, which adds <details> and <summary> HTML elements to allow for expanding and contracting block sections",
 
-	"main": "dist/markdown-it-collapsible.cjs.js",
-	"module": "dist/markdown-it-collapsible.es.js",
+	"main": "dist/markdown-it-expandable.cjs.js",
+	"module": "dist/markdown-it-expandable.es.js",
 	"exports": {
-		"require": "./dist/markdown-it-collapsible.cjs.js",
-		"import": "./dist/markdown-it-collapsible.es.js",
-		"default": "./dist/markdown-it-collapsible.es.js"
+		"require": "./dist/markdown-it-expandable.cjs.js",
+		"import": "./dist/markdown-it-expandable.es.js",
+		"default": "./dist/markdown-it-expandable.es.js"
 	},
 
 	"types": "./dist/src/plugin.d.ts",

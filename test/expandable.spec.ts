@@ -15,34 +15,36 @@ describe("markdown-it-collapsible", () => {
 +++
 		`);
 		
-		expect(/<details class="collapsible" open>/.test(result)).toBeTruthy();
+		expect(/<details open>/.test(result)).toBeTruthy();
 	});
 
 	
-	it.only("using ++> starts out CLOSED", () => {
+	it("using ++> starts out CLOSED", () => {
 		const result = md.render(`
 # Hello
 >>> this is my section
 - one
-- >>> two
-    - 2a
-		- 2b
+- two
 - three
 >>>
 `);
-		expect(/<details class="collapsible">/.test(result)).toBeTruthy();
-		console.log(result);
+		expect(/<details>/.test(result)).toBeTruthy();
 		
 	});
 
 	
-		it("just a list", () => {
+		it("nested expandable list and sub-list", () => {
 			const result = md.render(`
 # Hello
 - one
-- two
+- >>> two
+	- 2a
+	- 2b
+	- +++ 2c
 - three
 `);
+			const twoLineItem = /<li class="lvl-[0-9]+ expandable">\s*<details>\s*<summary>\s*<span .*<\/span>\s*two/;
+			expect(twoLineItem.test(result)).toBeTruthy();
 		});
 	
 });

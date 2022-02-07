@@ -15,7 +15,7 @@ export default defineConfig({
 			entry: path.resolve(__dirname, "src/plugin.ts"),
 			formats: ["es", "cjs"],
 		},
-		minify: "esbuild"
+		minify: "esbuild",
 	},
 	plugins: [dts()],
 

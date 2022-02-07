@@ -1,13 +1,13 @@
 {
 	"name": "markdown-it-expandable",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "A markdown-it plugin, which adds <details> and <summary> HTML elements to allow for expanding and contracting block sections",
-	"main": "dist/markdown-it-expandable.cjs.js",
-	"module": "dist/markdown-it-expandable.es.js",
+	"main": "dist/index.cjs",
+	"module": "dist/index.mjs",
 	"type": "module",
 	"exports": {
-		"require": "./dist/markdown-it-expandable.cjs.js",
-		"import": "./dist/markdown-it-expandable.es.js"
+		"require": "./dist/index.cjs",
+		"import": "./dist/index.mjs"
 	},
 	"types": "./dist/src/plugin.d.ts",
 	"scripts": {

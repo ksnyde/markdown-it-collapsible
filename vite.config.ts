@@ -14,6 +14,7 @@ export default defineConfig({
 			name: "particle-components",
 			entry: path.resolve(__dirname, "src/plugin.ts"),
 			formats: ["es", "cjs"],
+			fileName: (fmt) => `index.${fmt === "es" ? "mjs" : "cjs"}`,
 		},
 		minify: "esbuild",
 	},
